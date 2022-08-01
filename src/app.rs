@@ -30,6 +30,12 @@ impl eframe::App for TemplateApp {
   /// Put your widgets into a `SidePanel`, `TopPanel`, `CentralPanel`, `Window` or `Area`.
   fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
     // CentralPanel::default().show(ctx, |ui| {
+    //   ui.with_layout(Layout::left_to_right().with_main_wrap(true).with_cross_align(Align::TOP), |ui| {
+    //     for i in 0..50 { ui.button(format!("Test {}", i)); }
+    //   });
+    // });
+    
+    // CentralPanel::default().show(ctx, |ui| {
     //   ui.with_layout(Layout::left_to_right().with_main_wrap(true), |ui| {
     //     CollapsingHeader::new("Test Test Test Test Test").default_open(true).show(ui, |ui| {
     //       for i in 0..3 { ui.label(format!("Test {}", i)); }
@@ -39,6 +45,7 @@ impl eframe::App for TemplateApp {
     //     });
     //   });
     // });
+    
     CentralPanel::default().show(ctx, |ui| {
       StripBuilder::new(ui)
         .cell_layout(Layout::left_to_right().with_main_wrap(true))
